@@ -21,15 +21,15 @@ variable "aws_key_fingerprint" {
 variable "aws_key_name" {
   description = "SSH key name"
   type        = string
-  default     = "Ohio-Mar2022-Keypair"
+  default     = "server1"
 }
 
 variable "nomad_node_instance_size" {
   description = "EC2 instance type/size for Nomad nodes"
   type        = string
   # default     = "t2.small"
-  # default     = "t2.micro"
-  default = "t2.large"
+   default     = "t2.micro"
+  #default = "t2.large"
 }
 
 variable "nomad_node_ami_id" {
