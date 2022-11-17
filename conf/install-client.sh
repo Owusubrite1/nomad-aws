@@ -39,7 +39,7 @@ sudo chmod a+w /etc/nomad.d
 
 # Nomad config file copy
 sudo mkdir -p /tmp/nomad
-sudo curl https://raw.githubusercontent.com/mamos88/nomad-in-aws/master/conf/nomad/client.hcl -o /tmp/nomad/client.hcl
+sudo curl https://raw.githubusercontent.com/Owusubrite1/nomad-in-aws/master/conf/nomad/client.hcl -o /tmp/nomad/client.hcl
 sudo cp /tmp/nomad/client.hcl /etc/nomad.d/client.hcl
 
 # Install Consul
@@ -61,7 +61,7 @@ sudo chmod a+w /etc/consul.d
 
 # Consul config file copy
 sudo mkdir -p /tmp/consul
-sudo curl https://raw.githubusercontent.com/mamos88/nomad-in-aws/master/conf/consul/client.hcl -o /tmp/consul/client.hcl
+sudo curl https://raw.githubusercontent.com/Owusubrite1/nomad-in-aws/master/conf/consul/client.hcl -o /tmp/consul/client.hcl
 sudo cp /tmp/consul/client.hcl /etc/consul.d/client.hcl
 
 
@@ -101,14 +101,14 @@ fi
 # sudo nohup nomad agent -config /etc/nomad.d/client.hcl >$HOME/nomad.log &
 
 # Configure Nomad Autostart
-sudo curl https://raw.githubusercontent.com/mamos88/nomad-in-aws/master/conf/nomad/nomad.service -o /tmp/nomad/nomad.service
+sudo curl https://raw.githubusercontent.com/Owusubrite1/nomad-in-aws/master/conf/nomad/nomad.service -o /tmp/nomad/nomad.service
 sudo cp /tmp/nomad/nomad.service /etc/systemd/system/nomad.service
 sudo systemctl enable nomad
 
 # sudo systemctl start nomad
 
 # Configure Consul Autostart
-sudo curl https://raw.githubusercontent.com/mamos88/nomad-in-aws/master/conf/consul/consul-client.service -o /tmp/consul/consul.service
+sudo curl https://raw.githubusercontent.com/Owusubrite1/nomad-in-aws/master/conf/consul/consul-client.service -o /tmp/consul/consul.service
 sudo cp /tmp/consul/consul.service /etc/systemd/system/consul.service
 sudo systemctl enable consul
 

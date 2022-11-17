@@ -10,7 +10,7 @@ variable "aws_secret_key" {
 variable "aws_region" {
   description = "The region name to deploy into"
   type        = string
-  default     = "us-east-2"
+  default     = "us-east-1"
 }
 
 variable "aws_key_fingerprint" {
@@ -60,7 +60,7 @@ variable "nomad_server_count" {
 variable "allowed_ip_network" {
   description = "Networks allowed in security group for ingress rules"
   type        = list(any)
-  default     = ["184.98.63.88/32", "10.0.0.0/16"]
+  default     = ["70.162.60.114/32", "10.0.0.0/16"]
 }
 
 variable "az_map" {
