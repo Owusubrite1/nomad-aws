@@ -1,7 +1,8 @@
 resource "aws_instance" "amazon-client-nodes" {
     count = 3
-    ami = "ami-0067e1d862d28908e"
+    # ami = "ami-0067e1d862d28908e"
     # ami = "ami-0f756fcce08b197a3" # Alma Linux
+     ami  = "ami-0b0ea68c435eb488d" #By Bright
     instance_type = var.nomad_node_instance_size
     key_name = var.aws_key_name
     subnet_id = aws_subnet.nomad-lab-pub[count.index].id

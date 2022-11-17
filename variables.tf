@@ -35,8 +35,9 @@ variable "nomad_node_instance_size" {
 variable "nomad_node_ami_id" {
   description = "AMI ID to use for Nomad nodes"
   type        = string
-  default     = "ami-064ff912f78e3e561" # Amazon Linux
+  #default     = "ami-064ff912f78e3e561" # Amazon Linux
   # default     = "ami-00978328f54e31526" # Ubuntu Linux
+   default      = "ami-0b0ea68c435eb488d" #By Bright
 }
 
 variable "nomad_node_count" {
